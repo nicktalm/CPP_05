@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:59:23 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/27 13:06:12 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/11/28 11:20:42 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,24 @@ int main()
 {
 	try
 	{
-		Bureaucrat bureaucrat("Nick", 150);
-		Bureaucrat bureaucrat2("Luca", 9);
-		std::cout << bureaucrat << std::endl;
-		std::cout << bureaucrat2 << std::endl;
-		bureaucrat.decrementGrade();
-		bureaucrat2.decrementGrade();
-		std::cout << bureaucrat << std::endl;
-		bureaucrat.incrementGrade();
-		bureaucrat2.decrementGrade();
-		std::cout << bureaucrat << std::endl;
+		Bureaucrat Bureaucrat1("Nick", 1);
+		Bureaucrat Bureaucrat2("Luca", 120);
+
+		Form Form1("important", 20, 10);
+		Form Form2("not important", 140, 130);
+
+		std::cout << Bureaucrat1 << std::endl;
+		std::cout << Bureaucrat2 << std::endl;
+
+		Bureaucrat1.signForm(Form1);
+		Bureaucrat2.signForm(Form1);
+		Bureaucrat2.signForm(Form2);
+		
+		// std::cout << Form1 << std::endl;
+		// std::cout << Form2 << std::endl;
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	return 0;
 }

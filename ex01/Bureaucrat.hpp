@@ -6,39 +6,43 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 11:46:33 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/27 15:25:42 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/11/27 16:01:22 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
-private:
-	std::string _name;
-	int _grade;
-public:
-	Bureaucrat();
-	Bureaucrat(std::string name, int grade);
-	~Bureaucrat();
-	Bureaucrat(const Bureaucrat &copy);
-	Bureaucrat &operator=(const Bureaucrat &copy);
-	std::string getName() const;
-	int getGrade() const;
-	void incrementGrade();
-	void decrementGrade();
-	class GradeTooHighException : public std::exception
-	{
-		public:
-				const char* what() const throw();
-	};
-	class GradeTooLowException : public std::exception
-	{
-		public:
-				const char* what() const throw();
-	};
+	private:
+		std::string _name;
+		int _grade;
+	public:
+		Bureaucrat();
+		Bureaucrat(std::string name, int grade);
+		~Bureaucrat();
+		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat &operator=(const Bureaucrat &copy);
+		std::string getName() const;
+		int getGrade() const;
+		void incrementGrade();
+		void decrementGrade();
+		class GradeTooHighException : public std::exception
+		{
+			public:
+					const char* what() const throw();
+		};
+		class GradeTooLowException : public std::exception
+		{
+			public:
+					const char* what() const throw();
+		};
+		void signForm(Form &form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

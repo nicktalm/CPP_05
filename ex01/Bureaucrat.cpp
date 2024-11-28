@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:58:56 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/27 13:04:17 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/11/28 11:19:39 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,20 @@ std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat)
 {
 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
 	return out;
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+	if (form.isSigned())
+	{
+		std::cout << _name << " cannot sign " << form.getName() << " because the form is already signed" << std::endl;
+		return ;
+	}
+	if (_grade > form.getGradeToSign())
+	{
+		std::cout << _name << " cannot sign " << form.getName() << " because his grade is too low" << std::endl;
+		return ;
+	}
+	form.beSigned(*this);
+	std::cout << _name << " signs " << form.getName() << std::endl;
 }
