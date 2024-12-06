@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:55:58 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/29 17:03:52 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:00:29 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ class PresidentialPardonForm : public AForm
 		PresidentialPardonForm & operator=(PresidentialPardonForm const & copy);
 		PresidentialPardonForm(const PresidentialPardonForm &src);
 		void execute (Bureaucrat const & executor) const;
+		std::string getTarget() const;
 };
+
+std::ostream &operator<<(std::ostream &os, const PresidentialPardonForm &i);

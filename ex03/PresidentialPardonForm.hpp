@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 16:29:36 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/12/06 13:04:11 by ntalmon          ###   ########.fr       */
+/*   Created: 2024/11/29 16:55:58 by ntalmon           #+#    #+#             */
+/*   Updated: 2024/12/06 13:15:04 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 	public:
-		RobotomyRequestForm();
-		RobotomyRequestForm(std::string target);
-		~RobotomyRequestForm();
-		RobotomyRequestForm & operator=(RobotomyRequestForm const & copy);
-		RobotomyRequestForm(const RobotomyRequestForm &src);
-		void execute(Bureaucrat const & executor) const;
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		~PresidentialPardonForm();
+		PresidentialPardonForm & operator=(PresidentialPardonForm const & copy);
+		PresidentialPardonForm(const PresidentialPardonForm &src);
+		void execute (Bureaucrat const & executor) const;
 		std::string getTarget() const;
 };
 
-std::ostream &operator<<(std::ostream &os, const RobotomyRequestForm &i);
+std::ostream &operator<<(std::ostream &os, const PresidentialPardonForm &i);
