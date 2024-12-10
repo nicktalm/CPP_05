@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:10:53 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/27 15:21:49 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 12:05:56 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Bureaucrat;
 class Form
 {
 	private:
-		std::string _name;
+		const std::string _name;
 		bool _signed;
-		int _gradeToSign;
-		int _gradeToExecute;
+		const int _gradeToSign;
+		const int _gradeToExecute;
 	public:
 		Form();
 		Form(std::string name, int gradeToSign, int gradeToExecute);

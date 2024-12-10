@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 11:46:33 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/27 15:25:42 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 11:30:13 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Bureaucrat
 {
 private:
-	std::string _name;
+	const std::string _name;
 	int _grade;
 public:
 	Bureaucrat();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntalmon <ntalmon@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:10:53 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/12/02 15:22:02 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 12:06:53 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Bureaucrat;
 class AForm
 {
 	private:
-		std::string _name;
+		const std::string _name;
 		bool _signed;
-		int _gradeToSign;
-		int _gradeToExecute;
+		const int _gradeToSign;
+		const int _gradeToExecute;
 	protected:
 		std::string _target;
 	public:

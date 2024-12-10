@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:58:56 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/29 13:04:42 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 11:40:02 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,38 @@
 
 Bureaucrat::Bureaucrat(): _name("default"), _grade(150)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default Bureaucrat constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
 	std::cout << "Parametric constructor called" << std::endl;
 	if (grade < 1)
 		throw GradeTooHighException();
 	if (grade > 150)
 		throw GradeTooLowException();
-	_name = name;
 	_grade = grade;
 	std::cout << "Bureaucrat " << _name << " created" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name), _grade(copy._grade)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy Bureaucrat constructor called" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy)
 {
-	std::cout << "Assignation operator called" << std::endl;
-	_name = copy._name;
-	_grade = copy._grade;
+	std::cout << " Bureaucrat assignation operator called" << std::endl;
+	if (this != &copy)
+	{
+		_grade = copy._grade;
+	}
 	return *this;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Bureaucrat Destructor called" << std::endl;
 }
 
 std::string Bureaucrat::getName() const

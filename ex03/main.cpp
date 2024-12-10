@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ntalmon <ntalmon@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:59:23 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/12/03 11:19:20 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 15:22:55 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int main()
 		{
 			A.signForm(*internForm);
 			internForm->execute(A);
+
+			std::cout << *internForm << std::endl;
 
 			delete internForm;
 		}

@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:59:23 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/11/28 11:20:42 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 15:17:13 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int main()
 		Bureaucrat2.signForm(Form1);
 		Bureaucrat2.signForm(Form2);
 		
-		// std::cout << Form1 << std::endl;
-		// std::cout << Form2 << std::endl;
+		std::cout << Form1 << std::endl;
+		std::cout << Form2 << std::endl;
 	}
 	catch (std::exception &e)
 	{

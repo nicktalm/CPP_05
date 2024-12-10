@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:59:23 by ntalmon           #+#    #+#             */
-/*   Updated: 2024/12/06 12:59:55 by ntalmon          ###   ########.fr       */
+/*   Updated: 2024/12/10 15:19:33 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,7 @@ int main()
 	try
 	{
 		Bureaucrat Bureaucrat1("Nick", 1);
-		// Bureaucrat Bureaucrat2("Luca", 120);
 		// Bureaucrat Bureaucrat3(Bureaucrat1);
-
-		// AForm Form1("important", 20, 10);
-		// AForm Form2("not important", 140, 130);
 
 		ShrubberyCreationForm Form3("42");
 		RobotomyRequestForm Form4("Heilbronn");
@@ -44,9 +40,6 @@ int main()
 		std::cout << Form5 << std::endl;
 
 		// std::cout << Bureaucrat1 << std::endl;
-		// std::cout << Bureaucrat2 << std::endl;
-		// std::cout << Bureaucrat3 << std::endl;
-
 	}
 	catch (std::exception &e)
 	{
